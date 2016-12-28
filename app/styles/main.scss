@@ -1,0 +1,284 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    //max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+.navbar{
+  //background-color: rgba(43, 108, 163, 1);
+  color: white;
+  background-color: rgba(43, 108, 163, 1);
+  a{
+    color: white !important;
+    font-size: 1.3em;
+  }
+
+  .logo{
+
+    span{
+      display: block;
+    }
+
+    td{
+      vertical-align: middle;
+    }
+
+    .headline{
+      letter-spacing: 0.06em;
+      font-size: 22px;
+    }
+
+    .second{
+      color: #7DCADA;
+    }
+
+    .rif{
+      font-size: 12px;
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-header{
+    table{
+      margin-left: 1em;
+      color: white;
+    }
+  }
+}
+
+
+
+
+.menu{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 21px;
+
+  div{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+}
+
+
+@media screen and (min-width: 769px) {
+  .navbar-nav li a {
+    line-height: 80px;
+  }
+}
+
+
+
+//.navbar-toggle{
+//  margin-top: 23px;
+//}
+
+@media screen and (max-width: 768px) {
+  .logo-image{
+    display: none;
+  }
+}
+
+.carousel{
+  margin-top: 110px;
+}
+
+img{
+  max-width: 100%;
+}
+
+.us-wrapper{
+  position: relative;
+  .us{
+
+    .photo-members{
+
+    }
+  }
+  h2{
+    position: absolute;
+    left: 45%;
+  }
+
+  .logo-bi-text{
+    position: absolute;
+    left: 43%;
+    top: 119px;
+  }
+
+  .name{
+    position: absolute;
+    color: white;
+  }
+
+  .first-name{
+    left: 18%;
+    top: 74%;
+    font-size: 23px;
+  }
+
+  .second-name{
+    left: 68%;
+    top: 74%;
+    font-size: 23px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .first-name{
+      left: 18%;
+      top: 74%;
+      font-size: 23px;
+    }
+
+    .second-name{
+      left: 70%;
+      top: 74%;
+      font-size: 23px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .first-name{
+      left: 9%;
+      font-size: 25px;
+      top: 75%;
+    }
+
+    .second-name{
+      left: 74%;
+      font-size: 25px;
+      top: 75%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .first-name{
+      left: 7%;
+      top: 75%;
+      font-size: 20px;
+    }
+
+    .second-name{
+      left: 74%;
+      top: 75%;
+      font-size: 20px;
+    }
+  }
+}
+
+.contact-us{
+  padding-top: 15px;
+  padding-bottom: 34px;
+  background-color: #0C3C60;
+
+  h2{
+    color: white;
+    padding-bottom: 20px;
+  }
+
+  span{
+    font-size: 19px;
+    color: white;
+    display: block;
+  }
+
+  .form{
+    padding-top: 20px;
+  }
+}
+
+
+
