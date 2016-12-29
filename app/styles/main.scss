@@ -11,11 +11,6 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-  padding-bottom: 20px;
-}
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -173,7 +168,77 @@ body {
 }
 
 .carousel{
+  color: white;
   margin-top: 110px;
+
+  img{
+    width: 100%;
+  }
+
+  .slogan{
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+
+    top: 25%;
+    right: 20%;
+    left: 28%;
+  }
+
+  .briefcase-intro{
+    font-size: 17px;
+    top: 36%;
+    right: 25%;
+    left: 25%;
+    position: absolute;
+  }
+
+  @media screen and (max-width: 992px) {
+    .briefcase-intro{
+      right: 20%;
+      left: 26%;
+    }
+  }
+
+
+
+  .computer-text-wrapper{
+    background-color: rgba(100,149,237,0.5);
+    position: absolute;
+    top: 62%;
+    left: 13%;
+    right: 49%;
+    padding: 18px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .computer-text-wrapper {
+      top: 50%;
+    }
+  }
+
+  .devices-text-wrapper{
+    @extend .computer-text-wrapper;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    .devices-text-wrapper {
+      top: 54%;
+    }
+  }
+
+  @media screen and (min-width: 1238px){
+    .devices-text-wrapper {
+      top: 66%;
+    }
+  }
+
+
+
+  .computer-text{
+    font-size: 23px;
+  }
+
 }
 
 img{
@@ -277,6 +342,32 @@ img{
 
   .form{
     padding-top: 20px;
+
+    >*{
+      width: 45%;
+      margin: auto;
+      margin-bottom: 0.5em;
+      display: block;
+    }
+
+    input[type="submit"]{
+      width: 17%;
+      background-color: rgba(110, 164, 202, 1);
+      border: 0;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+      >*{
+        width: 90%;
+      }
+
+      input[type="submit"]{
+        width: 90%;
+      }
+    }
+
   }
 }
 

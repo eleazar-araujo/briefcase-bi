@@ -7,6 +7,7 @@
   <title>Briefcase bi</title>
 
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
   <!-- Place favicon.ico in the root directory -->
 
   <!-- build:css styles/vendor.css -->
@@ -22,7 +23,7 @@
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 </head>
-<input>
+<body>
 <!--[if lt IE 10]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -54,24 +55,66 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Inicio</span></a></li>
-        <li><a href="#">Servicio</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#start">Inicio</span></a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#us-section">Nosotros</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
 
-<div class="carousel">
-  <img src="http://placehold.it/1800x350">
+<div class="carousel" id="start">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="55555000">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="devices-text-wrapper">
+          <p class="computer-text"> Dale vida a tus datos con Excel y PowerBI</p>
+        </div>
+        <img src="images/devices.png" alt="Chania">
+      </div>
+
+      <div class="item">
+        <div class="computer-text-wrapper">
+          <p class="computer-text">Reduce el tiempo utilizado en minería de datos y ve directo al análisis de información</p>
+        </div>
+
+        <img src="images/computer.webp" alt="Chania">
+      </div>
+
+      <div class="item">
+        <p class="slogan">Ayudando al crecimiento de pequeños y medianos empresarios.</p>
+        <p class="briefcase-intro">BRIEFCASE C.A. es un Startup dirigido a la pequeña y mediana empresa que busca fomentar la cultura del control de gestión e inteligencia de negocios. Queremos brindarle a las PYMES la capacidad de mejorar el rumbo de su negocio, logrando tomar decisiones que se traduzcan en excelentes resultados para su empresa, todo a través de la elaboración de tableros  y reportes dinámicos  basados en herramientas de Microsoft.</p>
+        <img src="images/avila.webp" alt="Flower">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" data-target="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" data-target="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
 
 
-<div class="screenshot-table">
+<div class="screenshot-table" id="services">
   <img src="images/tablero-bi.png">
 </div>
-<div class="us-wrapper text-center">
+<div class="us-wrapper text-center" id="us-section">
 
   <div class="us">
     <h2>NOSOTROS</h2>
@@ -82,13 +125,17 @@
   </div>
 </div>
 
-<div class="contact-us text-center">
+<div class="contact-us text-center" id="contact">
   <h2>CONT&#193;CTANOS</h2>
   <span>info@briefcasebi.com.ve</span>
   <span>Telf: +58 414-4794643</span>
   <span>Telf: +58 412-5757070</span>
-  <form class="form">
-    <input type="text">
+  <form class="form" name="emailForm" method="post" action="form_to_email.php">
+    <input type="text" name="name" placeholder="Nombre y Apellido">
+    <input type="text" name="email" placeholder="Email">
+    <input type="text" name="subject" placeholder="Asunto">
+    <textarea rows="5" name="message" cols="30" placeholder="Mensaje"></textarea>
+    <input type="submit" value="Enviar">
   </form>
 
 
@@ -129,7 +176,36 @@
 <!-- endbuild -->
 
 <!-- build:js scripts/main.js -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="scripts/main.js"></script>
+<script>
+  $( document ).ready(function() {
+    console.log( "ready!" );
+
+    $('.lazy').slick({
+      lazyLoad: 'ondemand',
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+
+
+    var $root = $('html, body');
+    $('a').click(function() {
+
+      var href = $.attr(this, 'href');
+      $root.animate({
+        scrollTop: $(href).offset().top - 110
+      }, 500, function () {
+        window.location.hash = href;
+      });
+      return false;
+
+    });
+
+  });
+
+
+</script>
 <!-- endbuild -->
 </body>
 </html>
