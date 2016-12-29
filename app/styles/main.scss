@@ -180,14 +180,22 @@ $icon-font-path: '../fonts/';
     font-size: 15px;
     font-weight: bold;
 
-    top: 25%;
-    right: 20%;
-    left: 28%;
+    top: 22%;
+    right: 15%;
+    left: 26%;
+  }
+
+  @media screen and (max-width: 775px) {
+    .slogan{
+      right: 15%;
+      left: 20%;
+      top: 20%;
+    }
   }
 
   .briefcase-intro{
     font-size: 17px;
-    top: 36%;
+    top: 30%;
     right: 25%;
     left: 25%;
     position: absolute;
@@ -197,8 +205,18 @@ $icon-font-path: '../fonts/';
     .briefcase-intro{
       right: 20%;
       left: 26%;
+      top: 30%;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .briefcase-intro{
+      right: 15%;
+      left: 20%;
+      top: 30%;
+    }
+  }
+
 
 
 
@@ -331,7 +349,6 @@ img{
 
   h2{
     color: white;
-    padding-bottom: 20px;
   }
 
   span{

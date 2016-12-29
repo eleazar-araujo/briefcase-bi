@@ -2,18 +2,9 @@
 
 if(isset($_POST['email'])) {
 
-
-
     // EDIT THE 2 LINES BELOW AS REQUIRED
 
-    $email_to = "araujoeleazar@gmail.com";
-    //$email_to = "info@briefcasebi.com.ve";
-
-
-
-
-
-
+    $email_to = "info@briefcasebi.com.ve";
 
     function died($error) {
 
@@ -31,8 +22,6 @@ if(isset($_POST['email'])) {
 
     }
 
-
-
     // validation expected data exists
 
     if(!isset($_POST['name']) ||
@@ -47,7 +36,6 @@ if(isset($_POST['email'])) {
 
     }
 
-
     $email_subject = $_POST['subject'];
 
     $name = $_POST['name']; // required
@@ -55,9 +43,6 @@ if(isset($_POST['email'])) {
     $email_from = $_POST['email']; // required
 
     $message = $_POST['message']; // not required
-
-
-
 
     $error_message = "";
 
