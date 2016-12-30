@@ -2,6 +2,7 @@ $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/slick-carousel/slick/slick.scss";
 // endbower
 
 .browserupgrade {
@@ -171,6 +172,10 @@ $icon-font-path: '../fonts/';
   color: white;
   margin-top: 110px;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 80px;
+  }
+
   img{
     width: 100%;
   }
@@ -229,7 +234,15 @@ $icon-font-path: '../fonts/';
     padding: 18px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 728px) {
+    .computer-text-wrapper{
+      left: 11%;
+      right: 11%;
+      top: 5%;
+    }
+  }
+
+  @media screen and (min-width: 729px) and  (max-width: 768px) {
     .computer-text-wrapper {
       top: 50%;
     }
@@ -238,6 +251,13 @@ $icon-font-path: '../fonts/';
   .devices-text-wrapper{
     @extend .computer-text-wrapper;
   }
+
+  @media screen and (max-width: 514px) {
+    .devices-text-wrapper{
+
+    }
+  }
+
 
   @media screen and (min-width: 769px) and (max-width: 992px) {
     .devices-text-wrapper {
@@ -273,13 +293,19 @@ img{
   }
   h2{
     position: absolute;
-    left: 45%;
+    width: 100%;
   }
 
   .logo-bi-text{
     position: absolute;
     left: 43%;
     top: 119px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .logo-bi-text{
+      display: none;
+    }
   }
 
   .name{
